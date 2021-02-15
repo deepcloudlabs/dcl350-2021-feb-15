@@ -5,17 +5,22 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import org.springframework.context.annotation.Scope;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.annotation.RequestScope;
-import org.springframework.web.context.annotation.SessionScope;
 
 import com.example.lottery.service.LotteryService;
+import com.example.lottery.service.Quality;
+import com.example.lottery.service.QualityLevel;
 
 @Service
+@Quality(QualityLevel.SIMPLE)
 // @Scope("singleton") // default
 //@Scope("request")
 //@RequestScope
+@ConditionalOnProperty(value = "service.type", havingValue = "simple")
+@Profile({"dev","test"})
+// -Dspring.profiles.active=dev
 public class SimpleLotteryService implements LotteryService {
 
 	@Override
