@@ -1,7 +1,12 @@
 package com.example.hr.domain;
 
-import com.example.ddd.ValueObject;
+import com.example.ddd.annotations.ValueObject;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 // Value Object
 @ValueObject
 public final class BirthYear {

@@ -8,6 +8,11 @@ import com.example.hr.domain.Employee;
 import com.example.hr.domain.TcKimlikNo;
 import com.example.hr.repository.EmployeeRepository;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 @Repository
 public class EmployeeRepositoryMongoAdapter implements EmployeeRepository {
 
@@ -27,6 +32,12 @@ public class EmployeeRepositoryMongoAdapter implements EmployeeRepository {
 	public Optional<Employee> removeByIdentity(TcKimlikNo identity) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean existsByIdentity(TcKimlikNo identity) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

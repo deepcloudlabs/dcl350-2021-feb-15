@@ -1,5 +1,10 @@
 package com.example.hr.domain;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 // Value Object -> Immutable Class -> record (since Java 14)
 public class FullName {
 	private final String first;

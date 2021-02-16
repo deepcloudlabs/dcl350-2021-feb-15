@@ -4,6 +4,11 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.WeakHashMap;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 // Value Object
 public final class Iban {
 	private static final long MAX = 999999999;

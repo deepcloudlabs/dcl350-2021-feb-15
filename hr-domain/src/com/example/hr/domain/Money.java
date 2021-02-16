@@ -1,5 +1,10 @@
 package com.example.hr.domain;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 //Value Object
 public final class Money {
 	private final double value;

@@ -4,6 +4,11 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.WeakHashMap;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 // Value Object -> i) has no identity ii) immutable class
 public final class TcKimlikNo {
 	private final String value;

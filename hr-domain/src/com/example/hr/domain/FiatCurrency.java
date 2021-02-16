@@ -2,6 +2,11 @@ package com.example.hr.domain;
 
 import com.example.hr.infrastructure.FiatCurrencyCollector;
 
+/**
+ * 
+ * @author Binnur Kurt <binnur.kurt@gmail.com>
+ *
+ */
 // Value Object
 public final class FiatCurrency {
 	private final String value;
