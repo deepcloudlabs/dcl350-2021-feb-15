@@ -2,6 +2,7 @@ package com.example.hr.adapter;
 
 import java.util.Optional;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
 
 import com.example.hr.domain.Employee;
@@ -14,6 +15,7 @@ import com.example.hr.repository.EmployeeRepository;
  *
  */
 @Repository
+@ConditionalOnProperty(value = "database.type", havingValue = "mongodb")
 public class EmployeeRepositoryMongoAdapter implements EmployeeRepository {
 
 	@Override

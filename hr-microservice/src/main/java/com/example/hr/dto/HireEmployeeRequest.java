@@ -14,6 +14,7 @@ public class HireEmployeeRequest {
 	private String currencySymbol;
 	private String photo;
 	private int birthYear;
+	private boolean fulltime;
 	private List<Department> departments;
 
 	public HireEmployeeRequest() {
@@ -57,6 +58,14 @@ public class HireEmployeeRequest {
 
 	public void setSalary(double salary) {
 		this.salary = salary;
+	}
+
+	public boolean isFulltime() {
+		return fulltime;
+	}
+
+	public void setFulltime(boolean fulltime) {
+		this.fulltime = fulltime;
 	}
 
 	public String getCurrencySymbol() {
