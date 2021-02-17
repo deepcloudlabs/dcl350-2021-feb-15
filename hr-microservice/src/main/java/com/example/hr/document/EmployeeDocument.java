@@ -34,7 +34,7 @@ public class EmployeeDocument {
 	private Boolean fulltime;
 	@Max(2002)
 	private int birthYear;
-	private String photo;
+	private String photo; // Base-64 Encoded
 	private List<Department> departments;
 
 	public EmployeeDocument() {

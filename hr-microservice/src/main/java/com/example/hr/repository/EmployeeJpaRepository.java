@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.hr.document.EmployeeDocument;
 import com.example.hr.orm.EmployeeEntity;
 
 /**
@@ -13,5 +12,5 @@ import com.example.hr.orm.EmployeeEntity;
  *
  */
 public interface EmployeeJpaRepository extends JpaRepository<EmployeeEntity, String> {
-	List<EmployeeDocument> findByBirthYearBetween(int fromYear, int toYear);
+	List<EmployeeEntity> findByBirthYearBetween(int fromYear, int toYear);
 }
