@@ -2,17 +2,33 @@ package com.example.hr.dto;
 
 import java.util.List;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+
 import com.example.hr.domain.Department;
 import com.example.hr.domain.Employee;
+import com.example.validation.Iban;
+import com.example.validation.TcKimlik;
 
 public class HireEmployeeRequest {
+	@TcKimlik
 	private String identity;
+	@NotEmpty
+	@Pattern(regexp = "^[A-Z][a-z]+$")
 	private String firstName;
+	@NotEmpty
+	@Pattern(regexp = "^[A-Z][a-z]+$")
 	private String lastName;
+	@Iban
 	private String iban;
+	@Min(5000)
 	private double salary;
+	@Pattern(regexp = "^[A-Z]{2,}$")
 	private String currencySymbol;
 	private String photo;
+	@Max(2010)
 	private int birthYear;
 	private boolean fulltime;
 	private List<Department> departments;

@@ -25,7 +25,7 @@ public class LotteryConsumerService {
 		instances.forEach(server -> System.out.println(server.getHost()+":"+server.getPort()));
 	}
 	
-	//@Scheduled(fixedRate = 1_000)
+	@Scheduled(fixedRate = 1_000)
 	public void callLotteryService() {
 		RestTemplate restTemplate = new RestTemplate();
 		var si = instances.get(0);

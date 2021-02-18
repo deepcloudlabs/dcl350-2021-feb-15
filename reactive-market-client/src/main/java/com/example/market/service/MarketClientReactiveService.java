@@ -16,6 +16,7 @@ import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
 @Service
+@SuppressWarnings("deprecation")
 public class MarketClientReactiveService {
 	private final static String URL = "https://api.binance.com/api/v3/ticker/price";
 	private final static String BASE_URL = "https://api.binance.com/api/v3";
@@ -24,7 +25,7 @@ public class MarketClientReactiveService {
 					"SNTETH","BNTETH","BCCBTC","SALTBTC","SALTETH","XVGETH",
 					"XVGBTC", "SUBETH","EOSBTC","MTHBTC","ETCETH","DNTBTC","ENGBTC");
     private RestTemplate restTemplate = new RestTemplate();
-    private AsyncRestTemplate asyncRestTemplate = new AsyncRestTemplate();
+	private AsyncRestTemplate asyncRestTemplate = new AsyncRestTemplate();
     private WebClient webclient = WebClient.builder().baseUrl(BASE_URL).build();
 	//@Scheduled(fixedRate = 25_000)
 	public void callBinanceService() {
