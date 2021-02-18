@@ -22,6 +22,9 @@ public class LotteryController {
 	@Value("${lottery.size}")
 	private int lotterySize;
 	
+	@Value("${server.port}")
+	private int port;
+	
 	private LotteryService lotteryService;	
 
 	public LotteryController(LotteryService lotteryService) {
@@ -33,6 +36,7 @@ public class LotteryController {
 	@GetMapping
 	public List<List<Integer>> getNumbers(
 			@RequestParam(required = false, defaultValue = "1") int column){
+		System.err.println("Serving at port "+port);
 		return lotteryService.draw(lotteryMax, lotterySize, column);
 	}
 
